@@ -4,6 +4,7 @@ import TodoList from "../components/TodoList";
 
 export const todoSlice = createSlice({
     name: "todo",
+
     initialState: {
         todos: [
             { id: 0, todo: "read" },
@@ -19,6 +20,7 @@ export const todoSlice = createSlice({
         },
         deleteTask: (state, action) => {
             console.log(state.action?.payload, " delete task")
+            console.log("zsxdcfvghbj")
             // state.todos = state.todos.filter((item) =>item.id !==action.payload.id);
             const dev = state.todos.findIndex(({ id }) => id == action.payload)
             state.todos.splice(dev, 1)
