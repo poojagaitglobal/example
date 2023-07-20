@@ -1,3 +1,13 @@
+
+import {configureStore} from '@reduxjs/toolkit';
+import todoReducer from './UseSlices/todoSlice';
+
+export const store = configureStore({
+    reducer :{
+        todos: todoReducer
+    }
+})
+
 import { configureStore } from "@reduxjs/toolkit";
 import {  applyMiddleware, combineReducers } from "redux";
 import todoSlice from "./slices/todoSlice";
@@ -14,3 +24,4 @@ const store = configureStore({
 );
 
 export default store;
+
